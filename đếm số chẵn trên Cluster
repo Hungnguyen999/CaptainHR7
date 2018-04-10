@@ -60,7 +60,9 @@ public class WordCountHBase {
         InterruptedException {
       StringTokenizer itr = new StringTokenizer(value.toString());
       ImmutableBytesWritable chan = new ImmutableBytesWritable();
-      while (itr.hasMoreTokens()) {
+      while (itr.hasMoreTokens()) 
+      // CHỖ ĐÃ ĐƯỢC SỬA THÀNH HÀM ĐẾM SỐ CHẴN
+      {
       if(itr.nextToken()%2==0)
         {
         chan.set(Bytes.toBytes(itr.nextToken()));
